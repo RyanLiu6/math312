@@ -1,0 +1,101 @@
+\documentclass{amsart}
+\include{mydefs}
+
+\newenvironment{lyxlist}[1]
+{\begin{list}{}
+{\settowidth{\labelwidth}{#1}
+ \setlength{\leftmargin}{\labelwidth}
+ \addtolength{\leftmargin}{\labelsep}
+ \renewcommand{\makelabel}[1]{##1\hfil}}}
+{\end{list}}
+
+  \theoremstyle{remark}
+  \newtheorem*{rem*}{\protect Remark}
+
+\begin{document}
+
+\section*{Math 312: Assignment 1}
+
+\begin{lyxlist}{10.}
+\item [{1.}]
+We can expand $\binom{n}{k+1}$ into $\frac{n!}{(k+1)!(n-k-1)!}$ and $\binom{n}{k}$ into $\frac{n!}{(n-k)!}$
+
+Then, the problem becomes:
+
+= $\frac{n!}{(k+1)!(n-k-1)!}$ + $\frac{n!}{(n-k)!}$
+
+= $\frac{n!(n-k)}{(k+1)!(n-k-1)!(n-k)}$ + $\frac{n!(k+1)}{(n-k)!(k+1)}$
+
+For $0\leq k<n$ show that $\binom{n}{k+1}+\binom{n}{k}=\binom{n+1}{k+1}$
+by a direct calculation.
+
+\begin{lyxlist}{10.}
+\item [{OPT:}] show that this holds even if $k\geq n$. \bigskip{}
+
+\end{lyxlist}
+\item [{2.}] For $n\geq0$ show that $\sum_{j=0}^{n}\binom{j}{0}=\binom{n+1}{1}$.\\
+\emph{Hint:} once you unwind the definitions of both sides this is
+not hard. \bigskip{}
+
+\end{lyxlist}
+\begin{center}
+\textbf{Induction}
+\par\end{center}
+
+Use mathematical induction to prove the following assertions:
+\begin{lyxlist}{10.}
+\item [{3.}] Among every three consecutive positive integers there is one
+that is divisible by $3$.\bigskip{}
+
+\item [{4.}] Fix $k\geq0$ and show by induction on $n$ that for all $n\geq0$,
+$\sum_{j=0}^{n}\binom{j}{k}=\binom{n+1}{k+1}$.\\
+\emph{Hint:} For the induction step use problem 1.\bigskip{}
+
+\item [{5.}] (Summation formulas) The case $k=1$ of problem 4 reads: $\sum_{j=0}^{n}j=\binom{n+1}{2}=\frac{n(n+1)}{2}$.
+In this problem we will establish similar formulas for summing squares
+and cubes of integers (you may recall these formulas from your integral
+calculus course). Please express the formulas in the same form: a
+product of terms linear in $n$ divided by an integer.
+
+\begin{lyxlist}{10.}
+\item [{(a)}] Show that $j^{2}=2\binom{j}{2}+\binom{j}{1}$. This means
+that $\sum_{j=0}^{n}j^{2}=2\sum_{j=0}^{n}\binom{j}{2}+\sum_{j=0}^{n}\binom{j}{1}$
+(why?). Use problem 4 to establish a formula for $\sum_{j=0}^{n}j^{2}$.
+\item [{(b)}] Express $j^{3}$ as a combination of $\binom{j}{3},\,\binom{j}{2},\,\binom{j}{1}$
+and use problem 4 to prove a formula for $\sum_{j=0}^{n}j^{3}$.
+\item [{RMK}] You can check your formlas (but not your proofs) on the reverse
+page.\bigskip{}
+
+\end{lyxlist}
+\item [{6.}] (Well-ordering) Use the well-ordering principle to show that
+every amount of money payable with only nickels (10�) and quarters
+(25�) is divisible by 5�.\bigskip{}
+
+\end{lyxlist}
+\begin{center}
+\textbf{Factorials and primes}
+\par\end{center}
+\begin{lyxlist}{10.}
+\item [{7.}] For $2\leq j\leq n$, show that $n!+j$ is not a prime number.
+Conclude that there are arbitrarily long intervals containing no prime
+numbers. \bigskip{}
+
+\item [{8.}] For which prime numbers $p$ is $p+1$ also prime?\bigskip{}
+\end{lyxlist}
+\begin{rem*}
+It is believed (the ``twin prime conjecture'') that there are infinitely
+many primes $p$ for which $p+2$ is also prime. It is known (Polymath
+8's refinement of Zhang's Theorem) that there is some $k$, $2\leq k\leq246$
+such that $p,p+k$ are both prime infinitely often.
+\end{rem*}
+\newpage{}
+
+Hint for problem 5:
+\begin{eqnarray*}
+\sum_{j=0}^{n}1 & = & n+1\\
+\sum_{j=0}^{n}j & = & \frac{n(n+1)}{2}\\
+\sum_{j=0}^{n}j^{2} & = & \frac{n(n+1)(2n+1)}{6}\\
+\sum_{j=0}^{n}j^{3} & = & \left(\frac{n(n+1)}{2}\right)^{2}
+\end{eqnarray*}
+
+\end{document}

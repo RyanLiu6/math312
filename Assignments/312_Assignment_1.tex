@@ -1,0 +1,125 @@
+\documentclass{amsart}
+\usepackage{amsmath}
+
+\author{Ryan Zhuo Lun Liu}
+\title{MATH 312 Assignment 1}
+\begin{document}
+
+\begin{center}
+{\huge MATH 312 \par}
+{\Large Assignment 1 \par}
+{\normalsize Ryan Zhuo Lun Liu: \par}
+{\normalsize 30328141 \par}
+
+\end{center}
+
+\centerline{\textbf{Combinatorics}}
+\begin{enumerate}
+  \item
+  \begin{flushleft}
+  We can expand $\binom{n}{k+1}$ into $\frac{n!}{(k+1)!(n-k-1)!}$ and $\binom{n}{k}$ into $\frac{n!}{(n-k)!}$
+
+  Then, the problem becomes:
+
+  = $\frac{n!}{(k+1)!(n-k-1)!}$ + $\frac{n!}{k!(n-k)!}$
+
+  = $\frac{n!(n-k)}{(k+1)!(n-k-1)!(n-k)}$ + $\frac{n!(k+1)}{k!(n-k)!(k+1)}$
+
+  = $\frac{n!n - n!k + n!k + n!}{(k+1)!(n-k)!}$
+
+  = $\frac{(n+1)!}{(k+1)!(n-k)!}$
+
+  = $\binom{n+1}{k+1}$
+  \newline
+  \end{flushleft}
+
+  \item
+  \begin{flushleft}
+  Claim: $\sum_{j=0}^{n}\binom{j}{0} = \binom{n+1}{1}$
+  Proof:
+  For any $j, \binom{j}{0} = 1$.
+
+  As $j$ starts at 0, the summation is the sum of $n + 1$ 1s, or $n + 1$.
+
+  Looking at the right hand side, $\binom{n+1}{1} = n + 1$.
+
+  Thus, $LHS = RHS$ or $n + 1 = n + 1$
+  \newline
+  \end{flushleft}
+
+\centerline{\textbf{Induction}}
+  \item
+  \begin{flushleft}
+  Claim: For $n \in \mathbb{Z}_{\geq 1}, \exists n, n+1, n+2 |$ one of the three is divisible by 3.
+  Proof:
+  \begin{enumerate}
+    \item Base Case: n = 1 $\rightarrow$ $1, 2, 3$. $3 | 3$.
+
+    \item Assume that the Claim is true for $n = k \rightarrow$ prove for $n = k + 1$
+
+    \item For $k + 1, k + 2, k + 3$:
+
+    If $3 | k \rightarrow$ Claim is true as $3 | k + 3$
+
+    If $3 | k + 1 \rightarrow$ Claim is true for $k + 1$
+
+    If $3 | k + 2 \rightarrow$ Claim is true for $k + 2$
+    \newline
+  \end{enumerate}
+  \end{flushleft}
+
+  \item
+  \begin{flushleft}
+  Claim: Fix $k\geq0$, for all $n\geq0$, $\sum_{j=0}^{n}\binom{j}{k}=\binom{n+1}{k+1}$.
+  Proof:
+  \begin{enumerate}
+    \item Base Case: n = 1
+
+    LHS $= \binom{0}{k} + \binom{1}{k}$.
+
+    RHS $= \binom{2}{k + 1}$
+
+    \item Assume that the Claim is true for $n = m \rightarrow$ prove for $n = m + 1$
+
+    \item $\sum_{j=0}^{n + 1}\binom{j}{k}=\binom{n+2}{k+1}$
+
+    LHS $= \sum_{j=0}^{n + 1}\binom{j}{k}$
+
+    $= \sum_{j=0}^{n}\binom{j}{k} + \binom{n + 1}{k}$
+
+B    $= \binom{n + 1}{k + 1} + \binom{n + 1}{k}$ via the Induction Hypothesis. \newline
+
+    From Question 1, $\binom{n}{k + 1}$ + $\binom{n}{k}$ = $\binom{n + 1}{k + 1}$
+
+    OR: $\binom{n+ 1}{k + 1}$ + $\binom{n + 1}{k}$ = $\binom{n + 2}{k + 1}$
+
+    The LHS has the form $\binom{n+ 1}{k + 1}$ + $\binom{n + 1}{k}$, which is equal to $\binom{n + 2}{k + 1}$.
+
+    This is exactly the RHS. Thus, we have proved this Claim.
+    \newline
+  \end{enumerate}
+  \end{flushleft}
+
+  \item Question 5
+
+  \item
+  \begin{flushleft}
+  asdf
+  asdf
+  \end{flushleft}
+
+
+\centerline{\textbf{Factorials and Primes}}
+  \item
+  \begin{flushleft}
+  Claim: For $2\leq j\leq n$, show that $n!+j$ is not a prime number.
+  Proof: $n!$ by itself is not a prime number as it can be factored by any number $< n$. Consider that $2\leq j\leq n:$
+  \end{flushleft}
+
+  \item
+  \begin{flushleft}
+  The only two consecutive prime numbers are 2 and 3. Thus, $p = 2$.
+  \end{flushleft}
+\end{enumerate}
+
+\end{document}
